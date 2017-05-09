@@ -1,6 +1,6 @@
 {
   "name": "mysql-slim",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "MySQL driver with promises.",
   "main": "index.js",
   "scripts": {
