@@ -1,10 +1,10 @@
 {
   "name": "mysql-slim",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "MySQL driver with promises.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "engines": {
     "node": ">=4.4.2"
@@ -17,5 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "mysql": "^2.13.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
   }
 }

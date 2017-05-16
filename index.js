@@ -2,18 +2,19 @@
 
 class MySql {
 
-	constructor(config) {
+	constructor(options) {
 		const mysql = require('mysql');
 
-		config.host = config.host || 'localhost';
+		options = options || {};
+		options.host = options.host || 'localhost';
 
-		this.connection = mysql.createConnection(config);
+		this.connection = mysql.createConnection(options);
 		this.connection.connect();
 	}
 
 	execute(sql, params) {
 		return new Promise((resolve, reject) => {
-			console.info(sql, params || '');
+			// console.info(sql, params || '');
 
 			this.connection.query(sql, params, (err, rows, fields) => {
 				if (err) {
@@ -28,4 +29,6 @@ class MySql {
 	}
 }
 
-module.exports = MySql;
+module.exports = (options) => {
+    return new MySql(options);
+};
